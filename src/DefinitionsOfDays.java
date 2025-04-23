@@ -6,7 +6,9 @@ public class DefinitionsOfDays {
         System.out.println("Ведите время");
         int time = t.nextInt();
 
-        if (time <= 5) {
+        if (time < 0) {
+            System.out.println("Неверный формат времени!!!");
+        }else if (time <= 5) {
             System.out.println("Ночь");
         }else if (time <= 11) {
             System.out.println("Утро");
@@ -14,6 +16,8 @@ public class DefinitionsOfDays {
             System.out.println("День");
         }else if (time <= 23) {
             System.out.println("Вечер");
+        }else if (time > 23) {
+            System.out.println("Неверный формат времени!!!");
         }
     }
 
